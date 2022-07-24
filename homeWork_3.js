@@ -18,15 +18,14 @@ console.log(`Number of words in the sentence is -> ${wordCount}`);
   * Convert any 4-word sentence into Titlecase
   */
 let phrase = "don't worry be happy"
-let firstLetter = phrase.substring(0,1).toUpperCase()
-let firstWord = phrase.substring(1, 6)
-let secondLetter = phrase.substring(6, 7).toUpperCase()
-let secondWord = phrase.substring(7, 12)
-let thirdLettert= phrase.substring(12, 13).toUpperCase()
-let thirdWord = phrase.substring(13, 15)
-let fourthLetter = phrase.substring(15, 16).toUpperCase()
-let fourthWord = phrase.substring(16)
-let wholePhrase = firstLetter.concat(firstWord, secondLetter, secondWord, thirdLettert, thirdWord,fourthLetter,fourthWord)
+let words = phrase.split(' ')
+
+words[0] = words[0].substring(0, 1).toUpperCase() + words[0].substring(1).toLowerCase()
+words[1] = words[1].substring(0, 1).toUpperCase() + words[1].substring(1).toLowerCase()
+words[2] = words[2].substring(0, 1).toUpperCase() + words[2].substring(1).toLowerCase()
+words[3] = words[3].substring(0, 1).toUpperCase() + words[3].substring(1).toLowerCase()
+
+let wholePhrase = words.join(' ')
 console.log(`whole 4-word pharse converted to Titalcase -> ${wholePhrase}`);
 
 /**
@@ -34,9 +33,11 @@ console.log(`whole 4-word pharse converted to Titalcase -> ${wholePhrase}`);
   * Create abbreviation for any 4-word sentence
   */
 let phrase2 = "do what you love"
-let firstChar = phrase2.substring(0, 1)
-let secondChar = phrase2.substring(3, 4)
-let thirdChar = phrase2.substring(8, 9)
-let fourthChar = phrase2.substring(12, 13)
-let abbreviation = firstChar.concat(secondChar, thirdChar, fourthChar).toUpperCase()
-console.log(`Abbreviation for the phrase "${phrase2}" is -> ${abbreviation}`);
+
+let phraseTwo = phrase2.split(' ')
+phraseTwo[0] = phraseTwo[0].substring(0, 1).toUpperCase()
+phraseTwo[1] = phraseTwo[1].substring(0, 1).toUpperCase()
+phraseTwo[2] = phraseTwo[2].substring(0, 1).toUpperCase()
+phraseTwo[3] = phraseTwo[3].substring(0, 1).toUpperCase()
+let wholePhrase2 = phraseTwo.join('')
+console.log(`Abbreviation for the phrase "${phrase2}" is -> ${wholePhrase2}`);
